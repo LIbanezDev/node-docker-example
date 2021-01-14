@@ -29,6 +29,8 @@ jobs:
         id: docker_build_2
         uses: docker/build-push-action@v2
         with:
+          context: .
+          file: ./Dockerfile
           push: true
           tags: lucasignacio18/node-github:2.0
 
