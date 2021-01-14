@@ -1,9 +1,11 @@
 FROM node:12-alpine
 
-WORKDIR /user/share/app
+WORKDIR /usr/share/app
 
 COPY . .
 
 RUN npm install
 
-CMD ["node", "main.ts"]
+RUN npm run build
+
+CMD ["node", "dist/main.js"]
