@@ -1,0 +1,24 @@
+{
+  "name": "basic-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node src/main.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  }
+}
