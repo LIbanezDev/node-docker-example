@@ -19,13 +19,12 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push first image
+        run: echo first image
+        working-directory: ./node-docker
         id: docker_build_1
         uses: docker/build-push-action@v2
         with:
-          context: .
-          file: node-docker/Dockerfile
           push: true
           tags: lucasignacio18/node-github:1.0
-
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
