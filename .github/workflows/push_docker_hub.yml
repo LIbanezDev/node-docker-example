@@ -22,15 +22,10 @@ jobs:
         id: docker_build_1
         uses: docker/build-push-action@v2
         with:
+          context: .
+          file: ./node-docker/Dockerfile
           push: true
           tags: lucasignacio18/node-github:1.0
-
-      - name: Build and push second image
-        id: docker_build_2
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: lucasignacio18/node-github:2.0
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

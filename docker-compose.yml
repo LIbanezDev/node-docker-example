@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  node-ts-app:
+    build:
+      context: "."
+      dockerfile: "node-docker/Dockerfile"
+    ports:
+    - 3000:3000

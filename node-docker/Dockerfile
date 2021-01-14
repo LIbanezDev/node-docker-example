@@ -1,8 +1,8 @@
 FROM node:12-alpine
 
-WORKDIR /usr/share/app
+COPY . /opt/app
 
-COPY . .
+WORKDIR /opt/app/node-docker
 
 RUN npm install
 
